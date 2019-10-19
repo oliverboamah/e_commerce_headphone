@@ -19,7 +19,10 @@ class _HomePageState extends State<HomePage> {
         child: Text('Homepage'),
       ),
       backgroundColor: PRIMARY_COLOR,
-      bottomNavigationBar: BottomNavBar(),
+      bottomNavigationBar: BottomNavBar(
+        onItemSelected: (index) => print(index),
+        notificationsCount: 3,
+      ),
     );
   }
 }
