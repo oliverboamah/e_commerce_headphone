@@ -8,6 +8,9 @@ class HeadphoneData {
   int inStockCount;
   String price;
   Color backgroundColor;
+  Color categoryColor;
+  Color nameColor;
+  Color priceColor;
 
   HeadphoneData(
       {this.image,
@@ -15,5 +18,8 @@ class HeadphoneData {
       this.name,
       this.inStockCount,
       this.price,
-      this.backgroundColor = Colors.white});
+      this.backgroundColor = Colors.white,
+      this.categoryColor = Colors.grey,
+      this.nameColor = Colors.black,
+      this.priceColor = Colors.grey});
 }

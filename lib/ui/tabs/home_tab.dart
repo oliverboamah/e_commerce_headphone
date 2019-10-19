@@ -30,7 +30,11 @@ class _HomeTabState extends State<HomeTab> {
       name: 'Power Beats',
       price: '\$249.95',
       inStockCount: 3,
-      backgroundColor: Colors.red,
+      backgroundColor: Color(0xfff33e54),
+      categoryColor: Colors.white.withOpacity(0.8),
+      nameColor: Colors.white,
+      priceColor: Colors.white70
+      
     ),
     HeadphoneData(
       image: 'assets/images/beats_yellow.png',

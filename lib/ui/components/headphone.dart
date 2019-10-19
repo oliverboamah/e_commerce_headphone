@@ -36,19 +36,24 @@ class HeadPhone extends StatelessWidget {
             padding: EdgeInsets.only(top: 24),
             child: Text(
               this.headphoneData.category,
-              style: TextStyle(color: Colors.grey.shade800, fontSize: 16),
+              style: TextStyle(
+                  color: this.headphoneData.categoryColor, fontSize: 16),
             ),
           ),
           Padding(
             padding: EdgeInsets.symmetric(vertical: 6),
             child: Text(
               this.headphoneData.name,
-              style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
+              style: TextStyle(
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                  color: this.headphoneData.nameColor),
             ),
           ),
           Text(
             this.headphoneData.price,
-            style: TextStyle(color: Colors.grey.shade800, fontSize: 16),
+            style:
+                TextStyle(color: this.headphoneData.priceColor, fontSize: 16),
           )
         ],
       ),
