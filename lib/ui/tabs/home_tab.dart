@@ -43,9 +43,11 @@ class _HomeTabState extends State<HomeTab> {
 
   List<EarphoneData> earphoneDataList = [
     EarphoneData(
-        image: 'assets/images/beats_yellow.png',
+        image: 'assets/images/apple_airpod.jpg',
         title: 'Ivory',
-        price: '\$199')
+        price: '\$199.99'),
+    EarphoneData(
+        image: 'assets/images/ivory.jpg', title: 'Ivory', price: '\$249.99')
   ];
 
   @override

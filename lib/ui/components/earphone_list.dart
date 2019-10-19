@@ -17,7 +17,7 @@ class _EarphoneListState extends State<EarphoneList> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 80,
+      height: 100,
       child: ListView.builder(
         scrollDirection: Axis.horizontal,
         itemBuilder: (BuildContext context, int position) {
