@@ -1,5 +1,7 @@
 // Flutter imports
 import 'package:e_commerce_headphones/ui/components/dotted_title.dart';
+import 'package:e_commerce_headphones/ui/components/earphone_list.dart';
+import 'package:e_commerce_headphones/ui/holders/earphone_data.dart';
 import 'package:flutter/material.dart';
 
 // My App imports
@@ -39,11 +41,18 @@ class _HomeTabState extends State<HomeTab> {
     )
   ];
 
+  List<EarphoneData> earphoneDataList = [
+    EarphoneData(
+        image: 'assets/images/beats_yellow.png',
+        title: 'Ivory',
+        price: '\$199')
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 24),
-      child: Column(
+      child: ListView(
         children: <Widget>[
           DottedTitle(
             title: 'Headphones',
@@ -55,6 +64,7 @@ class _HomeTabState extends State<HomeTab> {
           DottedTitle(
             title: 'Earphones',
           ),
+          EarphoneList(earphoneDataList: this.earphoneDataList)
         ],
       ),
     );
