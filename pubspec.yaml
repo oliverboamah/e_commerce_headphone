@@ -73,7 +73,11 @@ flutter:
 
   - family: CustomBellIcons
     fonts:
-      - asset: assets/fonts/CustomBellIcon.ttf  
+      - asset: assets/fonts/CustomBellIcon.ttf
+
+  - family: CustomSearchIcons
+    fonts:
+      - asset: assets/fonts/CustomSearchIcon.ttf  
   #   - family: Schyler
   #     fonts:
   #       - asset: fonts/Schyler-Regular.ttf
