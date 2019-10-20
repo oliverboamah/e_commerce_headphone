@@ -26,6 +26,10 @@ dependencies:
 
   # badges for flutter
   badges: ^1.1.0
+
+  # simple local storage
+  shared_preferences: ^0.5.3+5
+
 dev_dependencies:
   flutter_test:
     sdk: flutter
