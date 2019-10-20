@@ -1,13 +1,15 @@
 // Flutter imports
-import 'package:badges/badges.dart';
-import 'package:e_commerce_headphones/ui/values/colors.dart';
 import 'package:flutter/material.dart';
+
+// Third party imports
+import 'package:badges/badges.dart';
 
 // My App imports
 import 'package:e_commerce_headphones/ui/icons/custom_bell_icon.dart';
 import 'package:e_commerce_headphones/ui/icons/custom_envelope_icon.dart';
 import 'package:e_commerce_headphones/ui/icons/custom_heart_icon.dart';
 import 'package:e_commerce_headphones/ui/icons/custom_home_icon.dart';
+import 'package:e_commerce_headphones/ui/values/colors.dart';
 
 class BottomNavBar extends StatefulWidget {
   final Function onItemSelected;
@@ -24,8 +26,9 @@ class _BottomNavBarState extends State<BottomNavBar> {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.only(bottom: 10),
+      color: PRIMARY_COLOR,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: <Widget>[

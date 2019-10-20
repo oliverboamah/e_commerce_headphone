@@ -1,4 +1,5 @@
 // Flutter imports
+import 'package:e_commerce_headphones/ui/values/colors.dart';
 import 'package:flutter/material.dart';
 
 // My App imports
@@ -57,7 +58,10 @@ class _HomeTabState extends State<HomeTab> {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(top: 24),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(topLeft: Radius.circular(35), topRight: Radius.circular(35)),
+        color: PRIMARY_COLOR
+      ),
       child: ListView(
         children: <Widget>[
           DottedTitle(
