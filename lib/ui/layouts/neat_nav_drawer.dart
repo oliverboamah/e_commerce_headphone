@@ -1,10 +1,10 @@
 // flutter package imports
-import 'package:badges/badges.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // third party package imports
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:badges/badges.dart';
 
 // my package imports
 import 'package:e_commerce_headphones/ui/components/neat_menu_item.dart';
