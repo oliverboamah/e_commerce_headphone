@@ -1,4 +1,5 @@
 // Flutter imports
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // Third party imports
@@ -34,21 +35,24 @@ class _BottomNavBarState extends State<BottomNavBar> {
         color: PRIMARY_COLOR,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
             InkWell(
               child: Container(
-                padding: EdgeInsets.symmetric(horizontal: 25, vertical: 10),
+                padding:
+                    EdgeInsets.only(left: 12, right: 12, top: 5, bottom: 10),
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: <Widget>[
                     Icon(
-                      CustomHomeIcon.home,
+                      CupertinoIcons.home,
                       color: this.selectedTabIndex == 0
                           ? Colors.grey.shade800
                           : Colors.white,
+                      size: 30,
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 8, top: 5),
+                      padding: const EdgeInsets.only(left: 8, top: 10),
                       child: Text(
                         'Home',
                         style: TextStyle(
