@@ -53,6 +53,7 @@ class _BottomNavBarState extends State<BottomNavBar> {
                         'Home',
                         style: TextStyle(
                             fontWeight: FontWeight.bold,
+                            fontFamily: 'RaleWay',
                             color: this.selectedTabIndex == 0
                                 ? Colors.grey.shade800
                                 : Colors.white),

@@ -23,6 +23,7 @@ class DottedTitle extends StatelessWidget {
                 style: TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
+                    fontFamily: 'RaleWay',
                     fontSize: 24),
               ),
               Container(
