@@ -1,4 +1,5 @@
 // Flutter imports
+import 'package:e_commerce_headphones/ui/routes/routes.dart';
 import 'package:e_commerce_headphones/ui/values/colors.dart';
 import 'package:flutter/material.dart';
 
@@ -26,17 +27,15 @@ class _HomeTabState extends State<HomeTab> {
       inStockCount: 3,
     ),
     HeadphoneData(
-      image: 'assets/images/beats_red.png',
-      category: 'Beats Solo',
-      name: 'Power Beats',
-      price: '\$249.95',
-      inStockCount: 3,
-      backgroundColor: Color(0xfff33e54),
-      categoryColor: Colors.white.withOpacity(0.8),
-      nameColor: Colors.white,
-      priceColor: Colors.white70
-      
-    ),
+        image: 'assets/images/beats_red.png',
+        category: 'Beats Solo',
+        name: 'Power Beats',
+        price: '\$249.95',
+        inStockCount: 3,
+        backgroundColor: Color(0xfff33e54),
+        categoryColor: Colors.white.withOpacity(0.8),
+        nameColor: Colors.white,
+        priceColor: Colors.white70),
     HeadphoneData(
       image: 'assets/images/beats_yellow.png',
       category: 'Beats Solo',
@@ -59,9 +58,9 @@ class _HomeTabState extends State<HomeTab> {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
-        borderRadius: BorderRadius.only(topLeft: Radius.circular(35), topRight: Radius.circular(35)),
-        color: PRIMARY_COLOR
-      ),
+          borderRadius: BorderRadius.only(
+              topLeft: Radius.circular(35), topRight: Radius.circular(35)),
+          color: PRIMARY_COLOR),
       child: ListView(
         children: <Widget>[
           DottedTitle(
@@ -69,7 +68,8 @@ class _HomeTabState extends State<HomeTab> {
           ),
           HeadPhoneList(
             headPhoneList: this.headPhoneDataList,
-            onItemSelected: (position) => print(position),
+            onItemSelected: (position) => Routes().goToHeadphoneDetailPage(
+                context, this.headPhoneDataList[position]),
           ),
           DottedTitle(
             title: 'Earphones',
