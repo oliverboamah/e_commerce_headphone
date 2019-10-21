@@ -82,12 +82,11 @@ flutter:
   - family: CustomSearchIcons
     fonts:
       - asset: assets/fonts/CustomSearchIcon.ttf  
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
+  - family: Raleway
+    fonts:
+      - asset: assets/fonts/Raleway-Regular.ttf
+      - asset: assets/fonts/Raleway-Bold.ttf
+      - asset: assets/fonts/Raleway-Light.ttf
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
   #       - asset: fonts/TrajanPro_Bold.ttf
