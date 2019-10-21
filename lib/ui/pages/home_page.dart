@@ -1,4 +1,6 @@
 // Flutter imports
+import 'package:e_commerce_headphones/ui/components/neat_menu_item.dart';
+import 'package:e_commerce_headphones/ui/values/colors.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -12,9 +14,6 @@ import 'package:e_commerce_headphones/ui/layouts/neat_nav_drawer.dart';
 class HomePage extends StatefulWidget {
   // page storage bucket for tabs
   final _pageStorageBucket = PageStorageBucket();
-
-  // access to scaffold state
-  final GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
 
   @override
   State<StatefulWidget> createState() => _HomePageState();
@@ -31,25 +30,37 @@ class _HomePageState extends State<HomePage> {
     )
   ];
 
+  // access to scaffold state
+  GlobalKey<ScaffoldState> _drawerKey = GlobalKey();
+
+  // nav drawer menu items
+  List<NeatMenuItem> menuItems = [
+    NeatMenuItem(icon: Icons.home, title: 'Home'),
+    NeatMenuItem(
+      icon: Icons.shopping_cart,
+      title: 'Shopping Cart',
+      showBadge: true,
+      badgeValue: 3,
+    )
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      key: this.widget._drawerKey,
+      key: this._drawerKey,
       appBar: MyAppBar(
           onDashboardIconClicked: () =>
-              this.widget._drawerKey.currentState.openDrawer()).getAppBar(),
+              this._drawerKey.currentState.openDrawer()).getAppBar(),
       body: PageStorage(
         child: this.tabs[this.selectedTabIndex],
         bucket: this.widget._pageStorageBucket,
       ),
       drawer: NeatNavDrawer(
-        menuItems: null,
-        menuItemColor: null,
-        selectedMenuItemColor: null,
-        showCloseIcon: null,
-        closeIconColor: null,
-        drawerBackgroundColor: null,
-        onMenuItemClicked: null,
+        menuItems: this.menuItems,
+        selectedMenuItemColor: ACCENT_COLOR,
+        //  closeIconColor: null,
+        drawerBackgroundColor: PRIMARY_COLOR,
+        onMenuItemClicked: (title) => print(title),
       ),
       backgroundColor: Colors.white,
       bottomNavigationBar: BottomNavBar(
