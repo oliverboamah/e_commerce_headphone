@@ -6,9 +6,9 @@ Home            |  Product Detail
 :-------------------------:|:-------------------------:
 ![Home](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/home_tab.png) | ![Product Detail](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/product_detail.png) 
 
-Navigation Drawer            |   Home Tab
+Navigation Drawer            |   Home
 :-------------------------:|:-------------------------:
-![Home Tab](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/nav_drawer.png) | ![Navigation Drawer](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/home_tab2.png) 
+![Home](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/nav_drawer.png) | ![Navigation Drawer](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/home_tab2.png) 
 
 
 ## Features
