@@ -1,13 +1,14 @@
-// Flutter imports
-import 'package:e_commerce_headphones/ui/icons/custom_search_icon.dart';
+// flutter imports
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-// My App imports
+// my app imports
 import 'package:e_commerce_headphones/ui/values/colors.dart';
+import 'package:e_commerce_headphones/ui/icons/custom_search_icon.dart';
 
 class MyAppBar {
   final Function onDashboardIconClicked;
+
   MyAppBar({@required this.onDashboardIconClicked});
 
   getAppBar() {

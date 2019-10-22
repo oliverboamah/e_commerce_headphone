@@ -9,7 +9,6 @@ import 'package:badges/badges.dart';
 import 'package:e_commerce_headphones/ui/icons/custom_bell_icon.dart';
 import 'package:e_commerce_headphones/ui/icons/custom_envelope_icon.dart';
 import 'package:e_commerce_headphones/ui/icons/custom_heart_icon.dart';
-import 'package:e_commerce_headphones/ui/icons/custom_home_icon.dart';
 import 'package:e_commerce_headphones/ui/values/colors.dart';
 
 class BottomNavBar extends StatefulWidget {

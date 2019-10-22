@@ -1,14 +1,14 @@
-// Flutter imports
-import 'package:e_commerce_headphones/ui/routes/routes.dart';
-import 'package:e_commerce_headphones/ui/values/colors.dart';
+// flutter imports
 import 'package:flutter/material.dart';
 
-// My App imports
+// my app imports
 import 'package:e_commerce_headphones/ui/components/headphone_list.dart';
 import 'package:e_commerce_headphones/ui/components/dotted_title.dart';
 import 'package:e_commerce_headphones/ui/components/earphone_list.dart';
 import 'package:e_commerce_headphones/ui/holders/earphone_data.dart';
 import 'package:e_commerce_headphones/ui/holders/headphone_data.dart';
+import 'package:e_commerce_headphones/ui/routes/routes.dart';
+import 'package:e_commerce_headphones/ui/values/colors.dart';
 
 class HomeTab extends StatefulWidget {
   HomeTab({@required Key key}) : super(key: key);
@@ -18,7 +18,18 @@ class HomeTab extends StatefulWidget {
 }
 
 class _HomeTabState extends State<HomeTab> {
+  // sample headphones
   List<HeadphoneData> headPhoneDataList = [
+    HeadphoneData(
+        image: 'assets/images/beats_yellow.png',
+        category: 'Beats Solo',
+        name: 'Club Yellow',
+        price: '\$199',
+        inStockCount: 3,
+        categoryColor: Colors.white.withOpacity(0.8),
+        nameColor: Colors.white,
+        priceColor: Colors.white70,
+        backgroundColor: Color(0xff6582e6)),
     HeadphoneData(
       image: 'assets/images/beats_yellow.png',
       category: 'Beats Solo',
@@ -42,9 +53,20 @@ class _HomeTabState extends State<HomeTab> {
       name: 'Club Yellow',
       price: '\$199',
       inStockCount: 3,
-    )
+    ),
+    HeadphoneData(
+        image: 'assets/images/beats_yellow.png',
+        category: 'Beats Solo',
+        name: 'Club Yellow',
+        price: '\$199',
+        inStockCount: 3,
+        categoryColor: Colors.white.withOpacity(0.8),
+        nameColor: Colors.white,
+        priceColor: Colors.white70,
+        backgroundColor: Color(0xff6582e6))
   ];
 
+  // sample earphones
   List<EarphoneData> earphoneDataList = [
     EarphoneData(
         image: 'assets/images/apple_airpod.jpg',
@@ -68,8 +90,8 @@ class _HomeTabState extends State<HomeTab> {
           ),
           HeadPhoneList(
             headPhoneList: this.headPhoneDataList,
-            onItemSelected: (position) => Routes().goToHeadphoneDetailPage(
-                context, this.headPhoneDataList[position]),
+            onItemSelected: (position) => Routes()
+                .goToHeadphoneDetailPage(context, this.headPhoneDataList),
           ),
           DottedTitle(
             title: 'Earphones',

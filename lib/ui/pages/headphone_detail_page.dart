@@ -1,63 +1,23 @@
-import 'package:e_commerce_headphones/ui/components/suggested_headphone_list.dart';
-import 'package:e_commerce_headphones/ui/holders/headphone_data.dart';
-import 'package:e_commerce_headphones/ui/layouts/headphone_detail_app_bar.dart';
-import 'package:e_commerce_headphones/ui/routes/routes.dart';
-import 'package:e_commerce_headphones/ui/values/colors.dart';
+// flutter imports
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class HeadphoneDetailPage extends StatefulWidget {
-  final HeadphoneData headphoneData;
+// my app imports
+import 'package:e_commerce_headphones/ui/components/headphone_bullet_point.dart';
+import 'package:e_commerce_headphones/ui/components/suggested_headphone_list.dart';
+import 'package:e_commerce_headphones/ui/holders/headphone_data.dart';
+import 'package:e_commerce_headphones/ui/layouts/headphone_detail_app_bar.dart';
+import 'package:e_commerce_headphones/ui/values/colors.dart';
 
-  HeadphoneDetailPage({@required this.headphoneData});
+class HeadphoneDetailPage extends StatefulWidget {
+  final List<HeadphoneData> headphoneDataList;
+  HeadphoneDetailPage({@required this.headphoneDataList});
 
   @override
   State<StatefulWidget> createState() => _HeadphoneDetailPageState();
 }
 
 class _HeadphoneDetailPageState extends State<HeadphoneDetailPage> {
-  // headphone data list
-  List<HeadphoneData> headPhoneDataList = [
-    HeadphoneData(
-        image: 'assets/images/beats_yellow.png',
-        category: 'Beats Solo',
-        name: 'Club Yellow',
-        price: '\$199',
-        inStockCount: 3,
-        backgroundColor: Color(0xff6582e6)),
-    HeadphoneData(
-      image: 'assets/images/beats_yellow.png',
-      category: 'Beats Solo',
-      name: 'Club Yellow',
-      price: '\$199',
-      inStockCount: 3,
-    ),
-    HeadphoneData(
-        image: 'assets/images/beats_red.png',
-        category: 'Beats Solo',
-        name: 'Power Beats',
-        price: '\$249.95',
-        inStockCount: 3,
-        backgroundColor: Color(0xfff33e54),
-        categoryColor: Colors.white.withOpacity(0.8),
-        nameColor: Colors.white,
-        priceColor: Colors.white70),
-    HeadphoneData(
-      image: 'assets/images/beats_yellow.png',
-      category: 'Beats Solo',
-      name: 'Club Yellow',
-      price: '\$199',
-      inStockCount: 3,
-    ),
-    HeadphoneData(
-        image: 'assets/images/beats_yellow.png',
-        category: 'Beats Solo',
-        name: 'Club Yellow',
-        price: '\$199',
-        inStockCount: 3,
-        backgroundColor: Color(0xff6582e6))
-  ];
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -112,58 +72,18 @@ class _HeadphoneDetailPageState extends State<HeadphoneDetailPage> {
                   padding: const EdgeInsets.all(16.0),
                   child: Column(
                     children: <Widget>[
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            CupertinoIcons.check_mark,
-                            color: ACCENT_COLOR,
-                            size: 30,
-                          ),
-                          Text(
-                            'With Fast Fuel, 5 minutes of charging 3 hours',
-                            style: TextStyle(fontFamily: 'RaleWay'),
-                          )
-                        ],
+                      HeadphoneBulletPoint(
+                        text: 'With Fast Fuel, 5 minutes of charging 3 hours',
                       ),
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            CupertinoIcons.check_mark,
-                            color: ACCENT_COLOR,
-                            size: 30,
-                          ),
-                          Text(
-                            'Up to 40 hours listening time',
-                            style: TextStyle(fontFamily: 'RaleWay'),
-                          )
-                        ],
+                      HeadphoneBulletPoint(
+                        text: 'Up to 40 hours listening time',
                       ),
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            CupertinoIcons.check_mark,
-                            color: ACCENT_COLOR,
-                            size: 30,
-                          ),
-                          Text(
-                            'Apple W1 Chip & Class 1 Wireless Bluetooth',
-                            style: TextStyle(fontFamily: 'RaleWay'),
-                          )
-                        ],
+                      HeadphoneBulletPoint(
+                        text: 'Apple W1 Chip & Class 1 Wireless Bluetooth',
                       ),
-                      Row(
-                        children: <Widget>[
-                          Icon(
-                            CupertinoIcons.check_mark,
-                            color: ACCENT_COLOR,
-                            size: 30,
-                          ),
-                          Text(
-                            'A clear Sound producer like Lorelei',
-                            style: TextStyle(fontFamily: 'RaleWay'),
-                          )
-                        ],
-                      )
+                      HeadphoneBulletPoint(
+                        text: 'A clear Sound producer like Lorelei',
+                      ),
                     ],
                   ),
                 )
@@ -191,7 +111,7 @@ class _HeadphoneDetailPageState extends State<HeadphoneDetailPage> {
                     child: Padding(
                       padding: const EdgeInsets.only(right: 16.0),
                       child: SuggestedHeadPhoneList(
-                        headPhoneList: this.headPhoneDataList,
+                        headPhoneList: this.widget.headphoneDataList,
                         onItemSelected: () => {},
                       ),
                     ),

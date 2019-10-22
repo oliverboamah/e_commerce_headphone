@@ -78,7 +78,7 @@ class _NeatNavDrawerState extends State<NeatNavDrawer> {
                         style: TextStyle(
                             color: this.widget.menuTitleColor,
                             fontSize: 22,
-                           fontFamily: 'Raleway',
+                            fontFamily: 'Raleway',
                             fontWeight: FontWeight.bold),
                       ),
                     )
@@ -118,8 +118,7 @@ class _NeatNavDrawerState extends State<NeatNavDrawer> {
           ),
           title: Text(
             menuItem.title,
-            style: TextStyle(color: color, fontFamily: 'Raleway'
-            ),
+            style: TextStyle(color: color, fontFamily: 'Raleway'),
           ),
         ),
         onTap: () => _onMenuItemClicked(menuItem.title),

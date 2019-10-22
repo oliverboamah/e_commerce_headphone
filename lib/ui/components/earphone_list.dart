@@ -31,6 +31,6 @@ class _EarphoneListState extends State<EarphoneList> {
         itemCount: this.widget.earphoneDataList.length,
       ),
     );
-    ;
+    
   }
 }

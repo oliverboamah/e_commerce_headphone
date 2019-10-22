@@ -1,9 +1,9 @@
-// Flutter imports
+// flutter imports
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-// My App imports
+// my app imports
 import 'package:e_commerce_headphones/ui/layouts/bottom_navbar.dart';
 import 'package:e_commerce_headphones/ui/tabs/home_tab.dart';
 import 'package:e_commerce_headphones/ui/layouts/app_bar.dart';
@@ -62,7 +62,6 @@ class _HomePageState extends State<HomePage> {
       drawer: NeatNavDrawer(
         menuItems: this.menuItems,
         selectedMenuItemColor: ACCENT_COLOR,
-        //  closeIconColor: null,
         drawerBackgroundColor: PRIMARY_COLOR,
         onMenuItemClicked: (title) => print(title),
       ),
