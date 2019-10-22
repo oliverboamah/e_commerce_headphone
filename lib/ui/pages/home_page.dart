@@ -1,7 +1,4 @@
 // Flutter imports
-import 'package:e_commerce_headphones/ui/icons/custom_bell_icon.dart';
-import 'package:e_commerce_headphones/ui/icons/custom_heart_icon.dart';
-import 'package:e_commerce_headphones/ui/icons/custom_home_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
