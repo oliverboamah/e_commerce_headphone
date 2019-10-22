@@ -4,7 +4,7 @@ Beautiful Flutter UI for an E-commerce store selling Headphones. Works on both A
 ## Screenshots
 Home            |  Product Detail
 :-------------------------:|:-------------------------:
-![News Tab](https://github.com/codingoliver/e_commerce_headphone/blob/master/e_commerce_headphone/home_tab.png) | ![Video Tab](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/product_detail.png) 
+![Home](https://github.com/codingoliver/e_commerce_headphone/blob/master/e_commerce_headphone/home_tab.png) | ![Product Detail](https://github.com/codingoliver/e_commerce_headphone/blob/master/screenshots/product_detail.png) 
 
 Navigation Drawer
 :-------------------------:
